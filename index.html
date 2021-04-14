@@ -5,18 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mrs+Sheppards&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/app.js" defer></script>
     <title>Tic Tac Toe</title>
   </head>
   <body>
     <div class="container">
-      <div class="board">
+      <div id="board">
         <div class="square" id="square1"></div>
         <div class="square" id="square2"></div>
         <div class="square" id="square3"></div>
@@ -27,7 +22,7 @@
         <div class="square" id="square8"></div>
         <div class="square" id="square9"></div>
       </div>
-      <h1>Current Player:<span id="player"></span></h1>
+      <h1>Current Player:<span id="player">X</span></h1>
     </div>
   </body>
 </html>

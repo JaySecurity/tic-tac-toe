@@ -16,7 +16,13 @@ body {
   align-items: center;
   justify-content: center;
 }
-.board {
+#player {
+  display: inline-block;
+  font-family: 'Mrs Sheppards', sans-serif;
+  padding: 0.5rem;
+  margin-left: 20px;
+}
+#board {
   height: 60vh;
   width: 60vh;
   max-width: 800px;
