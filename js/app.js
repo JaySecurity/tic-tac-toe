@@ -1,6 +1,9 @@
+// Constants
+
 const board = document.getElementById('board');
 const currentPlayerSpan = document.getElementById('player');
 const squares = document.querySelectorAll('.square');
+const resetBtn = document.getElementById('reset-btn');
 
 let player1 = true;
 let playerSymbol = 'X';
@@ -10,8 +13,14 @@ let score = [
   [0, 0, 0],
   [0, 0],
 ];
+let turns = 0;
+
+// Event Listeners
 
 board.addEventListener('click', handleClick);
+resetBtn.addEventListener('click', resetGame);
+
+// Game Functions
 
 function handleClick(e) {
   if (e.target.classList.contains('square')) {
@@ -20,9 +29,10 @@ function handleClick(e) {
     else {
       e.target.innerHTML = `<h1>${playerSymbol}</h1>`;
       e.target.classList.add(playerSymbol);
+      turns++;
       updateScore(e.target.id);
       isWinner = checkWinner();
-      setTimeout(updateGame, 500);
+      setTimeout(updateGame, 200);
     }
   } else {
     return;
@@ -79,11 +89,9 @@ function updateScore(position) {
 }
 
 function checkWinner() {
-  //debugger;
   let winner = null;
   score.forEach((arr) => {
     arr.forEach((element) => {
-      console.log(element);
       if (element === 3) {
         winner = 'Player 1 ';
         return winner;
@@ -98,8 +106,13 @@ function checkWinner() {
 
 function updateGame() {
   if (isWinner) {
-    alert(`Congradulations ${isWinner} wins!!`);
+    alert(`Congratulations ${isWinner} wins!!`);
+    board.removeEventListener('click', handleClick);
     return;
+  }
+  if (turns > 8) {
+    alert('Tie Game');
+    board.removeEventListener('click', handleClick);
   }
   player1 = !player1;
   if (player1) {
@@ -108,4 +121,23 @@ function updateGame() {
     playerSymbol = 'O';
   }
   currentPlayerSpan.textContent = playerSymbol;
+}
+
+function resetGame() {
+  // debugger;
+  squares.forEach((square) => {
+    square.innerHTML = '';
+    square.classList.remove('X');
+    square.classList.remove('O');
+  });
+  score = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0],
+  ];
+  player1 = false;
+  isWinner = null;
+  turns = 0;
+  board.addEventListener('click', handleClick);
+  updateGame();
 }

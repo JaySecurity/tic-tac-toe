@@ -87,3 +87,10 @@ body {
   border-top: 1px solid black;
   border-left: 1px solid black;
 }
+
+#reset-btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: crimson;
+  border-radius: 10px;
+}
