@@ -49,48 +49,48 @@ body {
   justify-content: center;
 }
 #square1 {
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 }
 #square2 {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 }
 #square3 {
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
 }
 #square4 {
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 }
 #square5 {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 #square6 {
-  border-left: 1px solid black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 #square7 {
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
 }
 #square8 {
-  border-left: 1px solid black;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
 }
 #square9 {
-  border-top: 1px solid black;
-  border-left: 1px solid black;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
 }
 
 #reset-btn {
   padding: 10px 20px;
   font-weight: bold;
-  background-color: crimson;
+  background-color: rgb(230, 47, 84);
   border-radius: 10px;
 }
